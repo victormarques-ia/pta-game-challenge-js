@@ -6,6 +6,8 @@ class Enemy {
     this.width = width;
     this.height = height;
     this.color = color;
+
+    this.dx = -gameSpeed;
   }
 
   drawEnemy (ctx) {

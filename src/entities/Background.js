@@ -10,6 +10,14 @@ class Background {
     this.image = new Image();
   }
 
+  animateBackground (ctx) {
+    this.posX += this.speedX;
+    if (this.posX == -(this.width)) {
+      this.posX = 0;
+    }
+    this.drawBackground(ctx);
+  }
+
   drawBackground (ctx) {
     this.image.src = this.path;
     ctx.beginPath();

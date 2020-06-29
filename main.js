@@ -22,12 +22,12 @@ document.addEventListener('click', (event) => {
 
       let { value: gameDifficult } = gameSettings.getGameDifficult();
 
-      if (color.toUpperCase() == '#2484E4') {
-        color = '#8A2BE2';
+      if (color.toUpperCase() == '#EB3434') {
+        color = '#FFD700';
       }
 
       gameFunctions.startGame(color, soundValue, (gameDifficult * 0.1));
-    }, 1200);
+    }, 1000);
 
   } else if (event.target.className == 'settings-button') {
 

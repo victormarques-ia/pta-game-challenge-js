@@ -66,7 +66,7 @@ export function startGame (color, soundValue, gameDifficult) {
 function SpawnEnemy () {
   let size = randomIntRange(32, 64);
   let type = randomIntRange(0, 1);
-  let enemy = new Enemy(canvas.width + size, canvas.height - size, size, size, '#2484E4', gameSpeed);
+  let enemy = new Enemy(canvas.width + size, canvas.height - size, size, size, '#EB3434', gameSpeed);
 
   if (type == 1) {
     enemy.posY -= player.originalHeight - 10;

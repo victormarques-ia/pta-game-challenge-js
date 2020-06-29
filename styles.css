@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 
+:root {
+  --primary-color: #0079ff;
+  --secondary-color: #FFD700;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -39,13 +44,18 @@ body {
 
 #home-screen .home-title h1 {
   font-size: 96px;
-  color: #8A2BE2;
-  /*text-shadow: 2px 2px 2px #333*/
+  color: var(--primary-color);
+  text-shadow: -1px -1px 0px #333,
+    3px 3px 0px #333,
+    6px 6px 0px #333;
 }
 
 #home-screen .home-title h2 {
   font-size: 32px;
-  color: #FFD700;
+  color: var(--secondary-color);
+  text-shadow: -1px -1px 0px #333,
+    2px 2px 0px #333,
+    3px 3px 0px #333;
 }
 
 #home-screen .home-options {
@@ -59,7 +69,7 @@ body {
   width: 100%;
   min-width: 252px;
 
-  background-color: #8A2BE2;
+  background-color: var(--primary-color);
   color: #fafafa;
   letter-spacing: 1px;
   font-size: 16px;
@@ -106,7 +116,8 @@ body {
 }
 
 #modal-settings-screen .settings-content {
-  background-color: #8A2BE2;
+  background-color: var(--primary-color)
+  ;
   opacity: 0.9;
   margin: 15% auto; 
   padding: 20px;
@@ -169,7 +180,7 @@ input::-webkit-color-swatch {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #FFD700;
+  background: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -177,7 +188,7 @@ input::-webkit-color-swatch {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #FFD700;
+  background: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -206,7 +217,7 @@ input::-webkit-color-swatch {
   justify-content: center;
   align-self: center;
   border: 16px solid #f3f3f3; 
-  border-top: 16px solid #8A2BE2; 
+  border-top: 16px solid var(--primary-color); 
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -216,29 +227,6 @@ input::-webkit-color-swatch {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-/* Div Highscore*/
-#high-score {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  max-width: 192px;
-  height: 48px;
-  
-  background-color: #8A2BE2;
-  border: 8px;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 0 0.2em black;
-  padding: 0 16px;
-}
-
-#high-score p {
-  color: #fafafa;
-  font-size: 24px;
-  padding-left: 16px;
 }
 
 /* END GAME SCREEN */
@@ -254,7 +242,7 @@ input::-webkit-color-swatch {
   height: 100%; 
   overflow: auto; 
   background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.8);
 }
 
 #modal-end-screen .end-content {
@@ -262,15 +250,18 @@ input::-webkit-color-swatch {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   height: 60vh;
 }
 
 #modal-end-screen .end-content h1 {
   font-size: 72px;
-  color: #ff2b2b;
-
+  color: #eb3434;
   margin-bottom: 64px;
+  text-shadow: -1px -1px 0px black,
+    3px 3px 0px black,
+    6px 6px 0px black;
 }
 
 #modal-end-screen .end-content button {
@@ -279,7 +270,7 @@ input::-webkit-color-swatch {
   width: 100%;
   min-width: 252px;
 
-  background-color: #8A2BE2;
+  background-color: var(--primary-color);
   color: #fafafa;
   letter-spacing: 1px;
   font-size: 16px;

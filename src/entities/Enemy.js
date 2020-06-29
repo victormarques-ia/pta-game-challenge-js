@@ -7,6 +7,13 @@ class Enemy {
     this.height = height;
     this.color = color;
   }
+
+  drawEnemy (ctx) {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.fillRect(this.posX, this.posY, this.width, this.height);
+    ctx.closePath();
+  }
 }
 
 export default Enemy;

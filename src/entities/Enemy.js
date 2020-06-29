@@ -1,6 +1,6 @@
 
 class Enemy {
-  constructor (posX, posY, width, height, color) {
+  constructor (posX, posY, width, height, color, gameSpeed) {
     this.posX = posX;
     this.posY = posY;
     this.width = width;

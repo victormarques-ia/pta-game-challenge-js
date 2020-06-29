@@ -141,7 +141,7 @@ function updateGemeArea () {
     highscoreText.text = 'Highscore: ' + highscore;
   }
 
-  highscoreText.drawText();
+  highscoreText.drawText(ctx);
 
   gameSpeed += 0.003;
 }

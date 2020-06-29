@@ -10,6 +10,12 @@ class Enemy {
     this.dx = -gameSpeed;
   }
 
+  updateEnemy (ctx, gameSpeed) {
+    this.posX += this.dx;
+    this.drawEnemy(ctx);
+    this.dx = -gameSpeed;
+  }
+
   drawEnemy (ctx) {
     ctx.beginPath();
     ctx.fillStyle = this.color;

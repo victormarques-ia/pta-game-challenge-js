@@ -13,6 +13,37 @@ class Player {
     this.jumpTimer = 0;
   }
 
+  animatePlayer (keys, gravity, canvas, ctx) {
+
+    // Jump logic
+    if (keys['Space'] || keys['KeyW']) {
+      this.playerJump();
+    } else {
+      this.jumpTimer = 0;
+    }
+
+    // Half Player logic
+    if (keys['ShiftLeft'] || keys['KeyS']) {
+      this.height = this.originalHeight / 2;
+    } else {
+      this.height = this.originalHeight;
+    }
+
+    this.posY += this.dy;
+
+    // Gravity logic
+    if (this.posY + this.height < canvas.height) {
+      this.dy += gravity;
+      this.grounded = false;
+    } else {
+      this.dy = 0;
+      this.grounded = true;
+      this.posY = canvas.height - this.height;
+    }
+
+    this.drawPlayer(ctx);
+  }
+
   playerJump () {
     if (this.grounded && this.jumpTimer == 0) {
       this.jumpTimer = 1;

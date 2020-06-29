@@ -6,6 +6,13 @@ class Player {
     this.height = height;
     this.color = color;
   }
+
+  drawPlayer (ctx) {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.fillRect(this.posX, this.posY, this.width, this.height);
+    ctx.closePath();
+  }
 }
 
 export default Player;

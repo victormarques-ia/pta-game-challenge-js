@@ -15,6 +15,7 @@ let gameSound;
 let score;
 let scoreText;
 let highscore;
+let highscoreText;
 let player;
 let gravity;
 let backgroundImage;
@@ -57,12 +58,11 @@ export function startGame (color, soundValue, gameDifficult) {
   gameSound = new createSound('../public/game-sound.mp3', soundValue);
 
   gameSound.play();
-  showHighScore.createHighScore(highscore);
 
   myReq = requestAnimationFrame(updateGemeArea)
 }
 
-// Game Functions 
+// ======= Game Functions ======= //
 function SpawnEnemy () {
   let size = randomIntRange(32, 64);
   let type = randomIntRange(0, 1);

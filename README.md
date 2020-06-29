@@ -9,6 +9,10 @@ logo o indicado é utilizar a extenção Live Server disponível no VSCode, por 
 servidor.
 ```
 
+## Controles
+- Pular (Space bar ou W)
+- Agachar (Left shift)
+
 ## Tecnologias utilizadas e Links
 - JS
 - HTML

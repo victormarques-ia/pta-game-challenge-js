@@ -8,8 +8,6 @@ import endScreen from '../lib/endScreen.js';
 import randomIntRange from '../lib/randomInt.js';
 import * as scoreHandler from '../lib/scoreHandler.js';
 
-
-
 // ======== Global variables ======== //
 let canvas;
 let ctx;

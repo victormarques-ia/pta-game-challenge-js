@@ -5,6 +5,12 @@ class Player {
     this.width = width;
     this.height = height;
     this.color = color;
+
+    this.dy = 0;
+    this.jumpForce = 15;
+    this.originalHeight = height;
+    this.grounded = false;
+    this.jumpTimer = 0;
   }
 
   drawPlayer (ctx) {

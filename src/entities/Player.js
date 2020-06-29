@@ -13,6 +13,16 @@ class Player {
     this.jumpTimer = 0;
   }
 
+  playerJump () {
+    if (this.grounded && this.jumpTimer == 0) {
+      this.jumpTimer = 1;
+      this.dy = -this.jumpForce;
+    } else if (this.jumpTimer > 0 && this.jumpTimer < 15) {
+      this.jumpTimer++;
+      this.dy = -this.jumpForce - (this.jumpTimer / 50);
+    }
+  }
+
   drawPlayer (ctx) {
     ctx.beginPath();
     ctx.fillStyle = this.color;

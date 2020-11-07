@@ -2,6 +2,8 @@
 
 #### Criação de um jogo web utilizando JS, HTML e CSS.
 
+![](https://github.com/victormarques-ia/pta-game-challenge-js/blob/master/images/Square_Adventure.gif)
+
 ## Para executar
 ```bash
 Em alguns computadores e navegadores pode haver erro ao executar diretamente o index.html,
